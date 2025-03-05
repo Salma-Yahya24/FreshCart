@@ -23,6 +23,7 @@ import { HomeSliderComponent } from "../../additions/home-slider/home-slider.com
     FormsModule,
     CategorySliderComponent,
     HomeSliderComponent
+    
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -30,7 +31,7 @@ import { HomeSliderComponent } from "../../additions/home-slider/home-slider.com
 export class HomeComponent implements OnInit {
   productList!: product[];
   userWord: string = '';
-
+  searchBy: string = 'title'
   constructor(
     private _ProductService: ProductService,
     private _CartService: CartService,

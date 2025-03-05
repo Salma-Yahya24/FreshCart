@@ -5,16 +5,22 @@
   <app-category-slider></app-category-slider>
 
   <div class="searchInput md:w-1/3 mx-auto my-3 text-primary">
+    <select [(ngModel)]="searchBy" class="form-select mb-2">
+      <option value="title">Search by Title</option>
+      <option value="category">Search by Category</option>
+    </select>
+  
+    <!-- حقل الإدخال للبحث -->
     <input
       type="text"
       [(ngModel)]="userWord"
       class="form-control"
-      placeholder="Search by title...."
+      placeholder="Search..."
     />
   </div>
 
   <div class="row my-6">
-    @for (product of productList|search:userWord ; track $index) {
+    @for (product of productList|search:userWord : searchBy; track $index) {
 
     <div class="lg:w-1/6 p-3 md:w-1/4">
       <div class="bg-gray-100 rounded p-3 cursor-pointer">
