@@ -19,6 +19,7 @@ export class ProductsComponent implements OnInit {
   productList!: product[];
   userWord: string = '';
   searchBy: string = 'title';
+  
   constructor(
     private _ProductService: ProductService,
     private _CartService: CartService,
