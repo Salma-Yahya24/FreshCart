@@ -22,7 +22,7 @@
   <div class="row my-6">
     @for (product of productList|search:userWord : searchBy; track $index) {
 
-    <div class="lg:w-1/6 p-3 md:w-1/4">
+    <div class="lg:w-1/6 p-3 md:w-1/4 ">
       <div class="bg-gray-100 rounded p-3 cursor-pointer">
         <div [routerLink]="['/productdetails', product._id]">
           <img [src]="product.imageCover" class="w-full rounded" alt="" />
