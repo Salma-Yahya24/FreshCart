@@ -35,8 +35,11 @@ export class CategorySliderComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 7,
+        items: 1,
       },
+      400:{
+        items: 7
+      }
     },
     nav: true,
     rtl: true,
