@@ -40,5 +40,6 @@ export class CategorySliderComponent implements OnInit {
     },
     nav: true,
     rtl: true,
+    margin: 10,
   };
 }
